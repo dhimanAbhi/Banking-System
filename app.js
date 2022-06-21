@@ -39,14 +39,16 @@ app.use((req, res, next) =>{
     next();
 })
 
+app.get('/bank', async (req,res) => {
+    res.render('home');
+})
+
 app.get('/bank/viewCustomers', async (req,res) => {
     const allCust = await Customer.find({});
     res.render('customers', {allCust});
 })
 
-app.get('/bank', async (req,res) => {
-    res.render('home');
-})
+
 
 app.get('/bank/viewCustomer/:id', async (req, res) => {
     const cust = await Customer.findById(req.params.id);
