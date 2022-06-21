@@ -10,6 +10,7 @@ const flash = require('connect-flash');
 const session = require('express-session')
 const dbUrl = process.env.DB_URL;
 // mongodb://localhost:27017/bank
+// mongodb+srv://abhi2002dhi:nidhidhiman@cluster0.kp6ro.mongodb.net/?retryWrites=true&w=majority
 mongoose.connect("mongodb+srv://abhi2002dhi:nidhidhiman@cluster0.kp6ro.mongodb.net/?retryWrites=true&w=majority", {
     useNewUrlParser:true,
     useUnifiedTopology:true,
