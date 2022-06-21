@@ -1,0 +1,9 @@
+<% layout('boilerplate') %>
+
+<div class="heading">Customer Details</div>
+<div class="custDetails">Name: <%=cust.name%></div> 
+<div class="custDetails">Email: <%=cust.email%></div> 
+<div class="custDetails">Current Balance: <%=cust.curBalance%></div>     
+<a href="/bank/<%=cust._id%>/transferMoney" class="transfer">
+    <div style="display:flex;justify-content:center;">Transfer Money</div>
+</a>

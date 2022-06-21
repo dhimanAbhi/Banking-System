@@ -1,0 +1,26 @@
+<% layout('boilerplate') %>
+<div class="heading">All Transactions</div>
+<%- include('flash') %>
+<table class="customers">
+    <tr>
+        <td>Sender's Name</td>
+        <td>Reciver's Name</td>
+        <td>Amount</td>
+        <td>Status</td>
+        <td>Time</td>
+    </tr>
+    <%for(let transaction of transactions) {%>
+        <tr>
+            <td><%=transaction.senderName%></td>
+            <td><%=transaction.receiverName%></td>
+            <td><%=transaction.transferAmount%></td>
+            <td><%if(transaction.transferSuccess){%>
+                Success
+                <%}else{%>
+                Fail
+                <%}%>
+            </td>
+            <td><%=transaction.dateAndTime%></td>
+        </tr>
+    <%}%>
+</table>

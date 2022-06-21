@@ -1,0 +1,18 @@
+<% layout('boilerplate') %>
+<form action="/bank/<%=id%>/transferMoney" method="POST">
+<div class="heading">Transfer Money</div>
+<%- include('flash') %>
+    <div class="lab">Enter The Amount You want to Transfer</div>
+    <input type="text" id="amount" class="form-control"  name="amount" placeholder="Enter Amount" required>
+    <div class="lab">Select Customer To Send Money</div>
+    <% for(let cust of allCust) {%>
+            <% if(cust._id != id){ %>
+                <div class="sendCustMoney">
+                    <input type="radio" class="form-check-input" name="receiverId" id="flexRadioDefault1" value="<%=cust._id%>">
+                    &nbsp;
+                    <%=cust.name%>
+                </div>                
+            <% } %>
+    <%}%>
+    <button class="transfer" id="transfer2">Transfer</button>
+</form>

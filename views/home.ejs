@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+
+    <!-- stylessheets -->
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+        <header>
+            <%- include('navbar') %>
+        </header>
+        <main style="margin:13rem 0rem;">
+            <div id="main-content" >
+                <div style="display:flex;flex-direction:column;align-items:center;">
+                    <div style="color:white; font-size:2rem;margin:1.5rem;font-weight:500;">Welcome to The Sparks Foundations Bank!</div>
+                    <div style="margin:0rem 0rem 1.5rem 0rem;">
+                        <a href="/bank/viewCustomers"><button class="homeBtns">View Customers</button></a>
+                        <a href="/bank/viewTransactions"><button class="homeBtns">View Transactions</button></a>
+                    </div>
+                
+                </div>
+            </div>
+            
+        </main>      
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>

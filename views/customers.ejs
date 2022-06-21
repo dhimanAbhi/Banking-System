@@ -1,0 +1,23 @@
+<% layout('boilerplate') %>
+<div class="heading">View All Customers</div>
+<%- include('flash') %>
+<table class="customers">
+    <tr>
+        <td>Sr.No</td>
+        <td>Name</td>
+        <td>Email</td>
+        <td>Balance</td>
+        <td>        </td>
+    </tr>
+    <% let i=0; for(let cust of allCust) {%>
+        <tr>
+            <td><%-i%></td>
+            <td><%=cust.name%></td>
+            <td><%=cust.email%></td>
+            <td><%=cust.curBalance%></td>
+            <td><a href="/bank/viewCustomer/<%=cust._id%>"><button class="custDetailBtn">View Details</button></a></td>
+        </tr>
+    <% i++;}%>
+</table>
+
+ 
